@@ -555,10 +555,86 @@
                 <input type="file" class="form-control-file" id="exampleFormControlFile1">
             </div>
         </form>
+
+        <!-- Spinners -->
+        <h1 class="pb-2 mt-4 mb-2 border-bottom main-color">
+            Spinner
+        </h1>
+        
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading</span>
+        </div>
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading</span>
+        </div>
+        
+        <div class="spinner-grow" role="status">
+            <span class="sr-only">Loading</span>
+        </div>
+        <div class="spinner-grow text-success" role="status">
+            <span class="sr-only">Loading</span>
+        </div>
+        
+        <button type="button" class="btn btn-secondary" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true">
+            </span>
+            <span class="sr-only">Loading</span>
+        </button>
+        
+        <button type="button" class="btn btn-primary" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true">
+            </span>
+            Processing...
+        </button>
+        <button type="button" class="btn btn-primary" disable>
+            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true">
+            </span>
+            Processing...
+        </button>
+        <div class="spinner-border text-primary" role="status" style="height:5rem; width:5rem;">
+            <span class="sr-only">Loading</span>
+        </div>
+        <!-- Collapse -->
+        <h1 class="pb-2 mt-4 mb-2 border-bottom main-color">
+            Collapse
+        </h1>
+        
+        <!-- <a class="btn btn-success" data-toggle="collapse" href="#example_1" role="button" aria-expanded="false"
+                  aria-controls="example_1">
+                  Codecore
+                </a> -->
+        
+        <button class="btn btn-success" data-toggle="collapse" data-target="#example_1" role="button" aria-expanded="false"
+            aria-controls="example_1">
+            Codecore
+        </button>
+        
+        <div class="collapse" id="example_1">
+            <div class="card card-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum explicabo dolore ratione officia non similique
+                unde voluptas tenetur rem iusto! Voluptates perspiciatis odio tenetur, ratione voluptas assumenda? Quaerat,
+                aperiam atque.
+            </div>
+        </div>
+
+        <!-- Tooltip -->
+        <h1 class="pb-2 mt-4 mb-2 border-bottom main-color" data-toggle="tooltip"
+            title="I am tooltip hint. I am written inside title attribute">
+            Hover me I am a tooltip
+        </h1>
+        
+        <!-- Popover -->
+        <button class="btn btn-success" data-target="popover" title="popover title" data-content="I am popover content">
+            Popover
+        </button>
       <!-- Just adding a scroll to the page -->
       <div class="scroll">
         Just to add a scroll
       </div>
     </div>
+    $(document).ready(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="popover"]').popover();
+    })
   </body>
 </html>
